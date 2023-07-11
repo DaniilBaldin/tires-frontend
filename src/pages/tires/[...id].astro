@@ -18,24 +18,24 @@ type Tire = {
     priceToShow: number;
 };
 
-const allBrands = [
-    ...new Set(
-        tires.map((tire: Tire) => {
-            return tire.brandName;
-        })
-    ),
-];
+export async function getStaticPaths() {
+    const allBrands = [...new Set(tires.map((tire: Tire) => tire.brandName))];
+    console.log(allBrands);
+    return allBrands.map((brand: string) => {
+        return [
+            {
+                params: { id: brand.toLowerCase() },
+            },
+        ];
+    });
+}
 
-allBrands.forEach((e: any) => {
-    console.log(e);
-});
-
-// const { id } = Astro.params;
+const { id } = Astro.params;
 ---
 
 <Layout title='Tires'>
     <main>
         <!-- <p>{title}</p> -->
-        <p>tires</p>
+        <p>{id}</p>
     </main>
 </Layout>
