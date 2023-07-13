@@ -1,0 +1,24 @@
+---
+// component imports
+import MainLayout from '../layouts/Layout.astro';
+
+Astro.redirect('/');
+---
+
+<MainLayout title='Page Not Found'>
+    <div
+        class='container'
+        style={{
+            display: 'grid',
+            placeItems: 'center',
+            textAlign: 'center',
+            gap: '20px',
+        }}
+    >
+        <div>
+            <h1 class='h1'>Welp, this is awkward!</h1>
+            <p>We seem to have misplaced something…</p>
+        </div>
+        <a href='/'>Go home.</a>
+    </div>
+</MainLayout>
