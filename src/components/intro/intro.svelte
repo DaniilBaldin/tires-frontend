@@ -52,7 +52,7 @@
     @import '../../styles/variables.scss';
 
     section {
-        height: 21rem;
+        height: 18rem;
         width: 100%;
         background: linear-gradient(0deg, #507299, #2d435c);
         display: flex;

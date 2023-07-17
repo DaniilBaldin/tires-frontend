@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { tires } from '../../ts/brands';
+import DiskInfo from './components/diskInfo.svelte';
+
+type Tire = {
+    id: number;
+    images: string[];
+    brandName: string;
+    modelName: string;
+    configs: {
+        width: string;
+        diameter: string;
+        price: number;
+    }[];
+
+    nameSuffix: string | null;
+    thumbnail: string;
+    priceToShow: number;
+};
+
+export async function getStaticPaths() {
+    const allIds = [...new Set(tires.map((tire: Tire) => tire.id))];
+    return allIds.map((id: number) => {
+        return [
+            {
+                params: { id: id },
+            },
+        ];
+    });
+}
+
+const { id } = Astro.params;
+---
+
+<Layout title={`${id?.charAt(0).toUpperCase()}${id?.slice(1)}`}>
+    <main>
+        <DiskInfo
+            Id={id}
+            client:load
+        />
+    </main>
+</Layout>

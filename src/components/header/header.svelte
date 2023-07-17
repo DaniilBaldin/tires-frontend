@@ -10,7 +10,7 @@
 </header>
 
 <style lang="scss">
-    @import '../../styles/variables.scss';
+    @import '../../styles/variables.scss'; 
 
     header{
         width:100%;
@@ -19,13 +19,14 @@
         border: none;
         padding: 0px 0 10px 0;
         /* min-height: 80px; */
-        position: absolute;
+        position: relative !important;
+        background-color: #2d435c;
         top:0;
         left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 10;
+        z-index: 1000;
 
         @media (max-width:1100px) {
             padding-left: 20px;
@@ -66,11 +67,11 @@
 
     .button-container {
         display: flex;
-        gap: 10px;
+        gap: 5px;
     }
 
     .button {
-        width: 70px;
+        width: 80px;
         height: 30px;
         background-color: transparent;
         border: none;
