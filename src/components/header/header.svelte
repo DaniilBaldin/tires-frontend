@@ -1,10 +1,17 @@
+<script>
+    import Contacts from "~components/modal/contacts/contacts.svelte";
+    let showModal = false;
+</script>
+
 <header>
     <div class="container">
         <a href="/" class="logo">
         <img src="/TireLogo.png" alt="Logo" width={30} height={30}>Ukrdisk</a>
         <div class="button-container">
-            <button class="button">Новости</button>
-            <button class="button">Контакты</button>
+            <a class="button_link" href="https://mmr.net.ua/cat/autoworld">Новости</a>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <a class="button_link" aria-hidden="true" on:click={()=> (showModal = true)}>Контакты</a>
+            <Contacts bind:showModal />
         </div>
     </div>
 </header>
@@ -70,12 +77,22 @@
         gap: 5px;
     }
 
-    .button {
+    .button_link {
         width: 80px;
         height: 30px;
+        padding: 0;
         background-color: transparent;
         border: none;
         outline: none;
         color:$white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 </style>

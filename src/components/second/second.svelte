@@ -1,15 +1,27 @@
 <script>
-    import { cards } from "src/ts/cards";
+    import { cards } from 'src/ts/cards';
 </script>
 
 <section>
     <h2 class="h2">Производители дисков</h2>
     <div class="cards-container">
-        {#each cards  as card}
-                <a href={card.url} class="card">
-                    <img class="logo" src={card.logoSrc} alt={card.url}>
-                    <button class="watch-all-button">Посмотреть все</button>
-                <img class="disk-image" src={card.imageSrc} alt={card.url}></a>
+        {#each cards as card}
+            <a
+                href={card.url}
+                class="card"
+            >
+                <img
+                    class="logo"
+                    src={card.logoSrc}
+                    alt={card.url}
+                />
+                <button class="watch-all-button">Посмотреть все</button>
+                <img
+                    class="disk-image"
+                    src={card.imageSrc}
+                    alt={card.url}
+                /></a
+            >
         {/each}
     </div>
 </section>
@@ -30,13 +42,13 @@
     .h2 {
         font-size: 2rem;
         letter-spacing: 0.7px;
-        font-weight: 600;
+        font-weight: 500;
         color: #333;
         text-align: center;
         margin: 15px 0;
 
         @media (max-width: 600px) {
-            font-size:  .875rem;
+            font-size: 0.875rem;
             letter-spacing: 0.5px;
         }
     }
@@ -64,7 +76,7 @@
 
     .card {
         border-radius: 0.25rem;
-        box-shadow: 0 2px 4px 0 rgba(81, 115 ,152, .2);
+        box-shadow: 0 2px 4px 0 rgba(81, 115, 152, 0.2);
         overflow: hidden;
         background-color: $white;
         width: 14.75rem;
@@ -108,18 +120,17 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        border-radius: .125rem;
+        border-radius: 0.125rem;
         width: 11.25rem;
         height: 2.25rem;
         margin-top: 10px;
         position: relative;
         z-index: 1;
         background-color: transparent;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
         border: none;
         outline: none;
         text-decoration: none;
-
 
         &:hover {
             background-color: #ebf0f5;
@@ -129,11 +140,10 @@
     .disk-image {
         position: absolute;
         right: -5px;
-        bottom:-1px;
+        bottom: -1px;
         width: 11.5rem;
         height: 9.5rem;
-        margin-top: .875rem;
+        margin-top: 0.875rem;
         object-fit: contain;
     }
-
 </style>

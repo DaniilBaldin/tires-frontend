@@ -5,6 +5,7 @@ import Intro from '~components/intro/intro.svelte';
 import Second from '~components/second/second.svelte';
 import Third from '~components/third/third.svelte';
 import Board from '~components/board/board.svelte';
+import Footer from '~components/footer/footer.svelte';
 ---
 
 <Layout title='Ukrdisk | Диски на авто.'>
@@ -14,6 +15,7 @@ import Board from '~components/board/board.svelte';
         <Second client:load />
         <Third client:load />
         <Board client:load />
+        <Footer client:load />
     </main>
 </Layout>
 

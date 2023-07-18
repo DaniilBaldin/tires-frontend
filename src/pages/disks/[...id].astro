@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { tires } from '../../ts/brands';
 
-type Tire = {
+type Disk = {
     id: number;
     images: string[];
     brandName: string;
@@ -19,8 +19,8 @@ type Tire = {
 };
 
 export async function getStaticPaths() {
-    const allBrands = [...new Set(tires.map((tire: Tire) => tire.brandName))];
-    console.log(allBrands);
+    const allBrands = [...new Set(tires.map((disk: Disk) => disk.brandName))];
+    // console.log(allBrands);
     return allBrands.map((brand: string) => {
         return [
             {
