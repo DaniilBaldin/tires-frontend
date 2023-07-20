@@ -27,6 +27,10 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */

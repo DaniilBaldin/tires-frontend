@@ -20,7 +20,6 @@ type Disk = {
 
 export async function getStaticPaths() {
     const allBrands = [...new Set(tires.map((disk: Disk) => disk.brandName))];
-    // console.log(allBrands);
     return allBrands.map((brand: string) => {
         return [
             {

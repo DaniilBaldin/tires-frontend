@@ -28,7 +28,7 @@
                             alt=""
                         />
                         <p class="card_name">{disk.brandName} - {disk.modelName}</p>
-                        <p class="card_price">от {disk.priceToShow * (36.6).toFixed(0)} грн.</p>
+                        <p class="card_price">от {(disk.priceToShow * 36.6).toFixed(0)} грн.</p>
                         <p class="card_subtitle">⌀{disk.configs[0].diameter}''</p>
                         <div
                             class="button_container"
@@ -41,12 +41,12 @@
                         </div>
                     </a>
                 {/each}
-                <div class="button_container">
-                    <a
-                        href="disks"
-                        class="show-more_button">Показать больше</a
-                    >
-                </div>
+            </div>
+            <div class="button_container">
+                <a
+                    href="disks"
+                    class="show-more_button">Показать больше</a
+                >
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@
         width: 100%;
         max-width: 64rem;
         margin: 0 auto;
-        padding: 0 0rem;
+        padding: 0 1rem;
     }
 
     .title {
@@ -87,9 +87,9 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        gap: 25px;
-        /* flex-direction: row;
         justify-content: space-between;
+        /* gap: 25px; */
+        /* flex-direction: row;
         align-items: stretch;
         flex-wrap: wrap; */
     }
@@ -108,7 +108,7 @@
         border: none;
         outline: none;
         background-color: $white;
-        /* margin-bottom: 20px; */
+        margin-bottom: 20px;
         border-radius: 0.25rem;
         box-shadow: 0 2px 4px 0 rgba(81, 115, 152, 0.2);
         overflow: hidden;

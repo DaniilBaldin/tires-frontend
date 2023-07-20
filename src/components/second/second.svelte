@@ -3,7 +3,7 @@
 </script>
 
 <section>
-    <h2 class="h2">Производители дисков</h2>
+    <p class="h2">Производители дисков</p>
     <div class="cards-container">
         {#each cards as card}
             <a
@@ -30,7 +30,7 @@
     @import '../../styles/variables.scss';
 
     section {
-        margin-top: 60px;
+        margin-top: 80px;
         width: 100%;
         background: transparent;
         display: flex;
@@ -41,11 +41,12 @@
 
     .h2 {
         font-size: 2rem;
+        /* font-family; */
         letter-spacing: 0.7px;
         font-weight: 500;
         color: #333;
         text-align: center;
-        margin: 15px 0;
+        margin: 5px 0;
 
         @media (max-width: 600px) {
             font-size: 0.875rem;
@@ -59,9 +60,11 @@
         align-items: stretch;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 10px;
+        /* gap: 20px; */
         width: 100%;
         max-width: 64rem;
+        margin: 0.75rem auto;
+        padding: 0 1rem;
 
         @media (max-width: 1000px) {
             width: 740px;
@@ -98,12 +101,11 @@
     }
 
     .logo {
-        width: 100%;
+        width: 50%;
         height: 2.625rem;
         margin-top: 0;
         object-fit: contain;
         position: relative;
-        z-index: 1;
         zoom: 75%;
 
         @media (max-width: 1000px) {
@@ -125,7 +127,6 @@
         height: 2.25rem;
         margin-top: 10px;
         position: relative;
-        z-index: 1;
         background-color: transparent;
         transition: 0.3s ease-in-out;
         border: none;

@@ -1,11 +1,12 @@
 ---
 import Layout from '~layouts/Layout.astro';
-import Header from '~components/header/header.svelte';
+
 import Intro from '~components/intro/intro.svelte';
 import Second from '~components/second/second.svelte';
 import Third from '~components/third/third.svelte';
 import Board from '~components/board/board.svelte';
 import Footer from '~components/footer/footer.svelte';
+import Header from '~components/header/header.svelte';
 ---
 
 <Layout title='Ukrdisk | Диски на авто.'>
@@ -29,7 +30,8 @@ import Footer from '~components/footer/footer.svelte';
         // height: 100%;
         display: flex;
         flex-direction: column;
-        // align-items: center;
-        justify-content: space-between;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
     }
 </style>

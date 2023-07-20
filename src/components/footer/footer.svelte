@@ -62,7 +62,7 @@
             </a>
             <a
                 class="link"
-                href="/"
+                href="/about"
             >
                 О нас
             </a>
